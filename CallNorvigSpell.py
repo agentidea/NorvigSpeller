@@ -1,4 +1,4 @@
-from core import NorvigSpell as Spell
+from NorvigSpell import NorvigSpell as Spell
 
 
 class zaSpeller:
