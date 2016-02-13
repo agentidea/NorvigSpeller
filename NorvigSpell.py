@@ -1,7 +1,6 @@
 import re, collections
 class NorvigSpell:
     def __init__(self):
-        print "initialized NorvigSpell class"
         self.NWORDS = self.train( self.words( file('big.txt').read()))
         self.alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
@@ -23,7 +22,7 @@ class NorvigSpell:
        return set(deletes + transposes + replaces + inserts)
 
     def known_edits2(self, word):
-        return set(e2 for e1 in self.edits1(word) for e2 in edits1(e1) if e2 in self.NWORDS)
+        return set(e2 for e1 in self.edits1(word) for e2 in self.edits1(e1) if e2 in self.NWORDS)
 
     def known(self, words):
         return set(w for w in words if w in self.NWORDS)

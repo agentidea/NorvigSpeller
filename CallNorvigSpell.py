@@ -15,7 +15,7 @@ class zaSpeller:
         return incorrectFlag, corrected
 
     def __init__(self):
-        check=['spel','spellin','categorie','category']
+        check=['spel','spellin','categorie','category','gandi']
         self.spel = Spell()
 
         map(self.check_spelling,check)
